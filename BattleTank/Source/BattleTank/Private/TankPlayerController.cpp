@@ -16,7 +16,7 @@ void ATankPlayerController::BeginPlay()
 	}
 	else 
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Tank %s is posessed"), *(Tank->GetName()));
+		UE_LOG(LogTemp, Warning, TEXT("Tank %s is posessed by you"), *(Tank->GetName()));
 	}
 }
 
