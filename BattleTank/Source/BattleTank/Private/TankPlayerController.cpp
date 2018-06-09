@@ -7,16 +7,16 @@
 void ATankPlayerController::BeginPlay()
 {
 	Super::BeginPlay();
-	UE_LOG(LogTemp, Warning, TEXT("PlayerContoller Begin Play"));
+	//UE_LOG(LogTemp, Warning, TEXT("PlayerContoller Begin Play"));
 
 	auto Tank = GetControlledTank();
 	if (!Tank)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Tank not posessed"));
+		UE_LOG(LogTemp, Error, TEXT("Tank not posessed"));
 	}
 	else 
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Tank %s is posessed by you"), *(Tank->GetName()));
+		UE_LOG(LogTemp, Error, TEXT("Tank %s is posessed by you"), *(Tank->GetName()));
 	}
 }
 
