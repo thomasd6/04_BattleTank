@@ -2,6 +2,7 @@
 
 #include "Tank.h"
 #include "TankAimingComponent.h"
+#include "Engine/World.h"
 
 
 
@@ -22,6 +23,12 @@ void ATank::SetBarrelRefrence(UTankBarrel* BarrelToSet)
 void ATank::SetTurretRefrence(UTankTurret* TurretToSet)
 {
 	TankAimingComponent->SetTurretRefrence(TurretToSet);
+}
+
+void ATank::Fire()
+{	
+	auto Time = GetWorld()->GetTimeSeconds();
+	UE_LOG(LogTemp, Warning, TEXT("%f: Tank fired"), Time);
 }
 
 // Called when the game starts or when spawned
