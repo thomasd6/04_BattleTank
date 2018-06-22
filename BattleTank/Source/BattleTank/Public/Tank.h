@@ -10,6 +10,7 @@ class UTankAimingComponent;
 class UTankBarrel; 
 class AProjectile;
 
+
 UCLASS()
 class BATTLETANK_API ATank : public APawn
 {
@@ -48,4 +49,8 @@ private:
 
 	// Local barrel reference to spawn projectiles
 	UTankBarrel* Barrel = nullptr;
+
+	float ReloadTimeInSeconds = 3;
+
+	double LastFireTime = 0;
 };
