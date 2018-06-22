@@ -39,5 +39,4 @@ void UTankMovementComponent::RequestDirectMove(const FVector& MoveVelocity, bool
 	IntendTurnRight(RightThrow);
 	IntendMoveFoward(FowardThrow);
 	
-	//UE_LOG(LogTemp, Warning, TEXT("Move Velocity %s"), *AIFowardIntention.ToString());
 }
